@@ -1,6 +1,6 @@
 {
     "name": "@x-drive/txt-table",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "获取或显示文本菜单",
     "main": "dist/index.js",
     "files": [
@@ -10,7 +10,8 @@
         "dev": "swc src -D ./src/bin  --config-file .swcrc -d dist -w",
         "compile": "swc src -D ./src/bin --config-file .swcrc -d dist",
         "build": "yarn compile && yarn gen-declaration",
-        "gen-declaration": "tsc --emitDeclarationOnly"
+        "gen-declaration": "tsc --emitDeclarationOnly",
+        "changelog": "changelog"
     },
     "dependencies": {
         "@x-drive/utils": "1.1.19"
@@ -23,7 +24,8 @@
         "@types/inquirer": "8.2.1",
         "@swc/cli": "0.1.57",
         "@swc/core": "1.2.171",
-        "colors": "1.4.0"
+        "colors": "1.4.0",
+        "@x-drive/changelog": "1.1.6"
     },
     "repository": {
         "type": "git",

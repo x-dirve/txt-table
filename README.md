@@ -85,6 +85,7 @@ const tableData = table(
  */
 declare function render(data: TableData, title?: string, styles?: IStyles): void;
 ```
+设置颜色需要 `colors` ，请手动将该模块加入到依赖中可直接修改 package.json 或执行 `npm i -D colors`
 
 ## 例子
 `example` 目录提供了简单的使用例子

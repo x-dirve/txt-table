@@ -1,4 +1,4 @@
-import { isArray, isString, isUndefined } from "@x-drive/utils";
+import { isArray, isUndefined } from "@x-drive/utils";
 import type * as Colors from "colors/safe";
 
 /**基础数据类型 */
@@ -37,7 +37,12 @@ var safeColor: typeof Colors;
 function getTxtIfHasStyle(txt: string, style: ColorsType) {
     if (style) {
         if (isUndefined(safeColor)) {
-            safeColor = require("colors/safe");
+            try {
+                safeColor = require("colors/safe");
+            } catch (e) {
+                console.log("🥲 找不到 colors, 请手动安装 colors 到项目中\n   npm i -D colors");
+                return txt;
+            }
         }
         return safeColor[style](txt);
     }
